@@ -4,7 +4,7 @@ import 'package:english_words/english_words.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +19,17 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(),
         home: MyHomePage(),
       ),
+      );
+    }
+  }
+
+  class MyAppState extends ChangeNotifier {}
+
+  class MyHomePage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Text('Hello!'),
       );
     }
   }
